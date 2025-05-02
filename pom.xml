@@ -12,6 +12,10 @@
     <name>Hello World Servlet Example</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+
     <dependencies>
         <!-- Servlet API dependency -->
         <dependency>
@@ -25,18 +29,24 @@
 
     <build>
         <plugins>
-            <!-- SonarQube plugin with a compatible version for Java 8 -->
+            <!-- Compiler plugin configured for Java 8 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
+
+            <!-- SonarQube plugin -->
             <plugin>
                 <groupId>org.sonarsource.scanner.maven</groupId>
                 <artifactId>sonar-maven-plugin</artifactId>
-                <version>3.9.0.2155</version> <!-- Compatible with Java 8 -->
+                <version>3.9.0.2155</version>
             </plugin>
-
-            <!-- Additional plugins can go here -->
         </plugins>
     </build>
 
-    <properties>
-        <java.version>1.8</java.version> <!-- Java 8 -->
-    </properties>
 </project>
