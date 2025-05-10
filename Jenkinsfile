@@ -49,8 +49,8 @@ pipeline {
         stage('Artifact Upload') {
             steps {
                 echo "Uploading artifact to Nexus repository..."
-                nexusArtifactUploader(
-                    artifacts: [[
+                script {
+                    nexusArtifactUploader artifacts: [[
                         artifactId: 'hello-world-servlet-example',
                         classifier: '',
                         file: 'target/helloworld.war',
@@ -63,7 +63,7 @@ pipeline {
                     protocol: 'http',
                     repository: 'Releases',
                     version: "${BUILD_NUMBER}"
-                )
+                }
             }
         }
 
