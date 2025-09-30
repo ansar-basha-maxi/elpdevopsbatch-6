@@ -98,10 +98,11 @@ stages {
 }
 // post {
 //         success {
-//             mail to:"arjunrayewar@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Build success"
+//             mail to:"ansarbashashaik046@gmail.com", subject:"SUCCESS: ${currentBuild.fullDisplayName}", body: "Build success"
 //         }
 //         failure {
-//             mail to:"arjunrayewar@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
+//             mail to:"ansarbashashaik046@gmail.com", subject:"FAILURE: ${currentBuild.fullDisplayName}", body: "Build failed"
 //         }
 //     }       
 }
+
